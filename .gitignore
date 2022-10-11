@@ -1,0 +1,60 @@
+# generic files to ignore
+*.swp
+*.DB_Store
+*.DS_Store
+*.odt
+*~
+*.un~
+
+## Build generated
+build/
+DerivedData/
+
+## Xcode
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+.build/
+
+# Tuist
+Derived/
+*.xcodeproj
+*.xcworkspace
+Tuist/Dependencies/Carthage
+Tuist/Dependencies/SwiftPackageManager
+Tuist/Dependencies/graph.json
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
