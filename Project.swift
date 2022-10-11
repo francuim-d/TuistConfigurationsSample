@@ -25,8 +25,12 @@ let appTarget = Target(
     productName: name,
     bundleId: "com.francium.TuistConfigurationsSample",
     deploymentTarget: .iOS(targetVersion: "13.0", devices: .iphone),
+    infoPlist: .file(path: "TuistConfigurationsSample/Info.plist"),
     sources: ["TuistConfigurationsSample/**/*.swift"],
-    resources: ["TuistConfigurationsSample/Resources/**"],
+    resources: [
+        "TuistConfigurationsSample/Resources/**",
+        "GoogleService-Info.plist",
+    ],
     copyFiles: nil,
     headers: nil,
     entitlements: nil,
@@ -55,7 +59,8 @@ let project = Project(
     schemes: schemes.map(\.scheme),
     fileHeaderTemplate: nil,
     additionalFiles: [
-        .glob(pattern: .relativeToRoot("Configurations/Config.xcconfig"))
+        .glob(pattern: .relativeToRoot("Configurations/Config.xcconfig")),
+        .glob(pattern: .relativeToRoot("GoogleService-Info.plist"))
     ],
     resourceSynthesizers: [.strings(), .assets(), .fonts()]
 )
